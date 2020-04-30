@@ -22,7 +22,7 @@ def students_login(reg):
         respone.status_code = 200
         return respone
     except Exception as e:
-        print(e)
+        return {'error':e}
     finally:
         cursor.close()
         conn.close()
@@ -46,7 +46,7 @@ def get_student_attendence(regno):
         respone.status_code = 200
         return respone
     except Exception as e:
-        print(e)
+        return {'error':e}
     finally:
         cursor.close()
         conn.close()
@@ -68,7 +68,7 @@ def get_student_details(regno):
         print(respone)
         return respone
     except Exception as e:
-        print(e)
+        return {'error':e}
     finally:
         cursor.close()
         conn.close()

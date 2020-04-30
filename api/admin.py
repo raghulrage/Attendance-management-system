@@ -6,6 +6,9 @@ from flask import flash, request
 import datetime
 import random
 
+def not_found():
+    return {'error':'data not found'}
+
 @app.route('/get_date',methods=['GET'])
 def get_date():
     try:
@@ -123,7 +126,7 @@ def delete_student():
         _regno = _json['rollno']
 
         if _regno and request.method == 'POST':
-            sqlQuery = "DELETE FROM student WHERE register_no = (%s)"
+            sqlQuery = "DELETE student, attendance FROM student INNER JOIN attendance ON student.register_no = attendance.register_no WHERE student.register_no = (%s)"
             binddata = (_regno)
             conn = mysql.connect()
             cursor = conn.cursor()

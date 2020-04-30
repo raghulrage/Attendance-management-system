@@ -5,7 +5,8 @@ from flask import jsonify
 from flask import flash, request
 import datetime
 
-
+def not_found():
+    return {'error':'data not found'}
 
 @app.route('/add', methods=['POST'])
 def add_student():
