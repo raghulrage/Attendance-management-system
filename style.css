@@ -1,0 +1,52 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  height: 100%;
+  background: url(https://images.pexels.com/photos/1007025/pexels-photo-1007025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card{
+	box-shadow: 0px 0px 15px 2px grey;
+	transition: all .3s ease-in-out;
+}
+
+.card:hover{
+	box-shadow: 1px 1px 8px grey;
+}
+
+.list-group-item:hover{
+	background-color: #f0ebf2;
+	
+}
+
+.link{
+	background-color: #f44336;
+	color: white;
+	padding: 8px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	list-style: none;
+	transition: all .1s ease-in-out;
+}
+
+.link:hover{
+	text-decoration: none;
+	list-style: none;
+	color: white;
+	font-weight: 400;
+	background-color: #109604;
+}
+
+.but{
+	border: none;
+	background-color: transparent;
+}
+
+body{
+
+}
