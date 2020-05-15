@@ -9,3 +9,8 @@ Tech stack
 Database
 * MySQL
 
+HOME PAGE
+![](images/home.png)
+
+LOGIN PAGE
+![](images/login.png)
