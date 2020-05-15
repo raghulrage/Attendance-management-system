@@ -47,9 +47,9 @@
 	</nav>
 	<!-----------------------------------------------Navbar end--------------------------------------------->
 
-		<div class="container d-flex text-light justify-content-center">
+		<div class="container d-flex  justify-content-center">
 
-		<form class="text-center border border-light mt-5 p-5" style="background-color: rgba(0, 32, 128,0.2);" action="javascript:add_student()">
+		<form class="text-center border border-light mt-5 p-5"  action="javascript:add_student()">
 
 		    <p class="h4 mb-4">Add Student</p>
 

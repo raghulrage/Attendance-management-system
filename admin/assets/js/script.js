@@ -229,7 +229,7 @@ function resolve(){
     axios.post('http://127.0.0.1:5000/add_staff', arr, config)
       .then((response) => {
       console.log(response.data);
-      if (response.data === 'Staff Added successfully!  ') {
+      if (response.data === 'Staff Added successfully!') {
        swal({
         title: "Yeah!",
         text: response.data,
@@ -241,7 +241,7 @@ function resolve(){
       else{
         swal({
       title: "OOPS!",
-      text: response.data,
+      text: response.data+'1234567890',
       icon : "info"
     }).then(function() {
         location.reload();

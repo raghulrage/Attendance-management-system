@@ -47,10 +47,10 @@
 	</nav>
 	<!-----------------------------------------------Navbar end--------------------------------------------->
 
-	<div class="container d-flex justify-content-center mt-5">
-		<div class="row text-light">
+	<div class="container pt-5 d-flex justify-content-center mt-5">
+		<div class="row ">
 			<div class="col">
-				<form class="text-center border border-light p-5" style="background-color: rgba(0, 32, 128,0.2);" action="javascript:add_staff()">
+				<form class="text-center border border-light p-5"  action="javascript:add_staff()">
 
 					<p class="h4 mb-4">Add Staff</p>
 
@@ -62,7 +62,7 @@
 				</form>
 			</div>
 			<div class="col">
-				<form class="text-center border border-light p-5" style="background-color: rgba(0, 32, 128,0.2);" action="javascript:delete_staff()">
+				<form class="text-center border border-light p-5" action="javascript:delete_staff()">
 
 					<p class="h4 mb-4">Delete Staff</p>
 

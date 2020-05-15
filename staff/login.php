@@ -12,11 +12,11 @@ $get_class = json_decode($get_class);
 <body>
 
 	
-	<div class="container d-flex justify-content-center text-light">
+	<div class="container pt-5 d-flex justify-content-center">
 
-		<form class="text-center border border-light p-5 mt-5" action="javascript:login_staff()" style="background-color: rgba(0, 32, 128,0.2);" method="post">
+		<form class=" text-center p-5 mt-5" action="javascript:login_staff()" style="background-color: #fcf2ff;" method="post">
 
-			<p class="h4 mb-4 text-light">Faculty Login</p>
+			<p class="h4 mb-4">Faculty Login</p>
 
 			<input type="text" id="staff_id" class="form-control mb-4" name="staff_id" placeholder="Staff Id" autocomplete="off" required="">
 			<p class="h5 mb-4 text-left">Class</p>
@@ -29,7 +29,7 @@ $get_class = json_decode($get_class);
 				</div>
 			</div>		    			
 			<button class="btn btn-primary btn-block my-4" name="submit" type="submit">Login</button>
-			<a href="../index.html"><small id="emailHelp" class="form-text text-light">Home</small></a>
+			<a href="../index.html"><small id="emailHelp" class="form-text text-dark">Home</small></a>
 		</form>
 
 	</div>

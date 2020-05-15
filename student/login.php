@@ -8,16 +8,16 @@
 <body>
 
 	
-	<div class="container d-flex justify-content-center">
+	<div class="container pt-5 d-flex justify-content-center">
 
-		<form class="text-center border border-light p-5 mt-5" action="javascript:validate()" style="background-color: rgba(0, 32, 128,0.2);" method="post">
+		<form class="text-center p-5 mt-5" action="javascript:validate()" style="background-color: #fcf2ff;" method="post">
 
-			<p class="h4 mb-4 text-light">Student Login</p>
+			<p class="h4 mb-4">Student Login</p>
 
 			<input type="text" id="regno" class="form-control mb-4" name="regno" placeholder="Register Number" autocomplete="off" required="">		
 			<input type="password" id="password" class="form-control mb-4" name="password" placeholder="Password" autocomplete="off" required="">    			
 			<button class="btn btn-primary btn-block my-4" name="submit" type="submit">Login</button>
-			<a href="../index.html"><small id="emailHelp" class="form-text text-light">Home</small></a>
+			<a href="../index.html"><small id="emailHelp" class="form-text text-dark">Home</small></a>
 		</form>
 
 	</div>

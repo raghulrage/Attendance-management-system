@@ -46,7 +46,7 @@
 	<!-----------------------------------------------Navbar end--------------------------------------------->
 
 
-	<div class="container p-5  d-flex justify-content-center">
+	<div class="container mt-5 p-5  d-flex justify-content-center">
 		<div class="card " style="width: 18rem;">
 			<img class="card-img-top" src="https://cdn.dribbble.com/users/1000681/screenshots/3487082/teach2.gif" alt="Card image cap">
 			<div class="card-body">

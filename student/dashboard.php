@@ -39,7 +39,7 @@ if (isset($_GET['hello'])) {
 					<a class="nav-link " href="index.php">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link " href="profile.php">profile</a>
+					<a class="nav-link " href="profile.php">Profile</a>
 				</li>
 
 			</ul>

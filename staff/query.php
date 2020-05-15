@@ -53,9 +53,9 @@ $query_details = json_decode($get_query);
 		</div>
 	</nav>
 	<!-----------------------------------------------Navbar end--------------------------------------------->
-	<div class="container">
+	<div class="container pt-3">
 		<div class="row mt-5 w-100">
-			<form class="text-light border border-light w-100"  action="javascript:add_query()"style="background-color: rgba(0, 32, 128,0.2);" style="background-color: rgba(0, 32, 128,0.2);">
+			<form class=" border border-light w-100"  action="javascript:add_query()" >
 				<p class="h4 m-2">Enter your query here :</p>
 				<div class="row m-3">
 					<textarea class="form-control" id='query' rows="4" required=""></textarea>
@@ -71,8 +71,8 @@ $query_details = json_decode($get_query);
 				<input type="hidden" id='staff_id' value="<?php echo $_GET['staff_id']; ?>">	
 			</form>
 		</div>
-		<p class="h4 mt-3 text-light">Posted Queries :</p>
-		<div class="row table-responsive w-100" id="pending" style="max-height: 300px; overflow-y: auto; position: relative;">
+		<p class="h4 mt-3 ">Posted Queries :</p>
+		<div class="row table-responsive w-100" id="pending" style="max-height: 250px; overflow-y: auto; position: relative;">
 			
 			<table id="myQueryTable" class="mb-0 table table-bordered table-hover table-light table-striped" >
 				<thead class="thead-dark">
@@ -94,8 +94,8 @@ $query_details = json_decode($get_query);
 								<td><?php echo $value->query; ?></td>
 								<td><?php echo $value->date; ?></td>
 								<td><?php if ($value->status == 0){ ?>
-									<p class="mb-0 text-danger">Pending</p> <?php } else {?>
-										<p class="mb-0 text-success">Resolved</p> <?php } ?>
+									<p class="mb-0 text-danger font-weight-bold">Pending</p> <?php } else {?>
+										<p class="mb-0 text-success font-weight-bold	">Resolved</p> <?php } ?>
 									</td>
 								</tr>
 								<?php $i++; ?>

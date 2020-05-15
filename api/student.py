@@ -72,3 +72,4 @@ def get_student_details(regno):
     finally:
         cursor.close()
         conn.close()
+

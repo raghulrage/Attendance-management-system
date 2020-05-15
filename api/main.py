@@ -1,5 +1,9 @@
 from app import app
 
+from flask import Flask,redirect
+
+import webbrowser
+
 import datetime
 
 import admin
@@ -10,7 +14,7 @@ import staff
 
 @app.route('/')
 def hello():
-	return 'C:/xampp/htdocs/ajira/index.html'
+	 return redirect('http://localhost/ajira/')
 	
 if __name__ == '__main__':
     app.run()

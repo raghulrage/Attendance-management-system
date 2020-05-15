@@ -83,30 +83,27 @@ if (isset($_GET['hello'])) {
 			</button>
 		</div>
 	<?php } ?>
-	<div class="row m-0 p-3">
-		<p class="text-light h5">Date : &nbsp; </p>
-		<p class="text-light"> <?php echo date("d/m/Y"); ?></p>
+	<div class="row m-2 pl-5">
+		<p class="h5">Date : &nbsp; </p>
+		<p class="h5"> <?php echo date("d/m/Y"); ?></p>
 	</div>
-	
-	<div class="conatiner m-5 ">
-
-		<div class="row ml-5 font-weight-bold text-light d-flex justify-content-center">
-			<div class="col-2">
-				<p>#</p>
-			</div>
-			<div class="col-3">
-				<p >Name</p>
-			</div>
-			<div class="col-3">
-				<p>Register number</p>
-			</div>
-			<div class="col-3">
-				<p>Attendance</p>
-			</div>
-
-		</div>
-		<div class="row w-100 d-flex justify-content-center" >
-			<form action="javascript:attendance()">
+			<div class="container-fluid" style="opacity: 1;">
+				
+			<form class="p-5 ml-5 mr-5" action="javascript:attendance()">
+				<div class="row w-100 d-flex justify-content-center" >
+			<div class="row ml-5 font-weight-bold d-flex justify-content-center">
+				<div class="col-3">
+					<p>#</p>
+				</div>
+				<div class="col-3">
+					<p >Name</p>
+				</div>
+				<div class="col-3">
+					<p>Register number</p>
+				</div>
+				<div class="col-3">
+					<p>Attendance</p>
+				</div>
 				<div class="row table-responsive" style="overflow-x: hidden; max-height: 400px;">
 					<?php $i=1;?>
 					<?php if($get_students==0){ ?>
@@ -122,7 +119,7 @@ if (isset($_GET['hello'])) {
 									<input type="text" class="form-control" name="name" value="<?= $value->student_name; ?>" size = '30' readonly>
 								</div>
 								<div class="col-3">
-									<input type="text" class="form-control" name="regno" value='<?= $value->register_no; ?>' size = '30' readonly>
+									<input type="text" class="form-control" name="regno" value='<?= strtoupper($value->register_no); ?>' size = '30' readonly>
 								</div>
 
 								<div class="col-3">

@@ -41,8 +41,8 @@
 	<!-----------------------------------------------Navbar end--------------------------------------------->
 
 
-	<div class="container p-5  d-flex justify-content-center">
-		<div class="card " style="width: 18rem;">
+	<div class="container mt-5 p-5  d-flex justify-content-center">
+		<div class="card" style="width: 18rem;">
 			<img class="card-img-top" src="https://cdn.dribbble.com/users/1503691/screenshots/3440667/paddl-dribbble-studentavatars-v3.gif" alt="Card image cap">
 			<div class="card-body">
 				<h5 class="card-title">Name: <?php echo $get_student[0]->student_name; ?></h5>

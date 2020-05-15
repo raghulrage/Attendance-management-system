@@ -52,9 +52,6 @@
         <li class="nav-item">
           <a class="nav-link" href="manage_student.php">Manage Student</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="view_student.php"> View Students</a>
-        </li>
       </ul>
       <a href="query.php" class="notification">
             <span>Inbox</span>
@@ -73,35 +70,35 @@
     <input class="form-control " id="myInput" type="text" placeholder="Search..">
     <div class="row m-5 w-100 table-responsive" style="max-height: 450px; overflow-y: auto; position: relative;">
       <table class="mb-0 table table-bordered table-hover table-light table-striped">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Name</th>
-          <th scope="col">Register Number</th>
-          <th scope="col">Class</th>
-          <th scope="col">Status</th>
-        </tr>
-      </thead>
-      <tbody id="myTable">
-        <?php $i=1; ?>
-        <?php foreach ($get_attendance as $key => $value) { ?>
+        <thead class="thead-dark">
           <tr>
-            <th><?php echo $i; ?></th>
-            <td><?php echo $value->student_name; ?></td>
-            <td><?php echo $value->register_no; ?></td>
-            <td><?php echo strtoupper($value->class); ?></td>
-            <td id=att><?php if ($value->attendance == 'Present') { ?>
-              <p class="text-success font-weight-bold mb-0">Present</p> <?php } else { ?>
-              <p class="text-danger font-weight-bold mb-0">Absent</p> <?php } ?>
-            </td>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Register Number</th>
+            <th scope="col">Class</th>
+            <th scope="col">Status</th>
           </tr>
-          <?php $i++; ?>
-        <?php } ?>
-      </tbody>
-    </table>
+        </thead>
+        <tbody id="myTable">
+          <?php $i=1; ?>
+          <?php foreach ($get_attendance as $key => $value) { ?>
+            <tr>
+              <th><?php echo $i; ?></th>
+              <td><?php echo $value->student_name; ?></td>
+              <td><?php echo $value->register_no; ?></td>
+              <td><?php echo strtoupper($value->class); ?></td>
+              <td id=att><?php if ($value->attendance == 'Present') { ?>
+                <p class="text-success font-weight-bold mb-0">Present</p> <?php } else { ?>
+                  <p class="text-danger font-weight-bold mb-0">Absent</p> <?php } ?>
+                </td>
+              </tr>
+              <?php $i++; ?>
+            <?php } ?>
+          </tbody>
+        </table>
+      </div>
+      
     </div>
-    
-  </div>
   
 
 </body>

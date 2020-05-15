@@ -49,7 +49,7 @@ $query_count = json_decode($query_count);
 		</div>
 	</nav>
 	<!-----------------------------------------------Navbar end--------------------------------------------->
-	<p class="text-light ml-4">View Class Students:</p>
+	<p class=" ml-4 font-weight-bold">View Class Students:</p>
 	<div class="row m-3">
 		
 		<div class="btn-group-toggle">
@@ -61,9 +61,9 @@ $query_count = json_decode($query_count);
         </div>
 	</div>
 	<div class="container d-flex justify-content-center mt-5">
-		<div class="row text-light">
+		<div class="row">
 			<div class="col">
-				<form class="text-center border border-light p-5" style="background-color: rgba(0, 32, 128,0.2);" action="javascript:add_student()">
+				<form class="text-center border border-light p-5"  action="javascript:add_student()">
 
 					<p class="h4 mb-4">Add Student</p>
 
@@ -86,7 +86,7 @@ $query_count = json_decode($query_count);
 				</form>
 			</div>
 			<div class="col">
-				<form class="text-center border border-light p-5" style="background-color: rgba(0, 32, 128,0.2);" action="javascript:delete_student()">
+				<form class="text-center border border-light p-5"  action="javascript:delete_student()">
 					<p class="h4 mb-4">Delete Student</p>
 					<input type="text" id="rollno" class="form-control mb-4" autocomplete="off" required="" placeholder="Register Number">
 
