@@ -71,13 +71,13 @@
 
   <!-- ---------------------------------------------------------------------------------- -->
         <div class="row mx-auto mt-5 date-list" style="max-height: 550px; overflow-y: auto; position: relative;">
-        <?php foreach ($arr as $value) { ?>
+        <?php foreach ($get_date as $key => $value) { ?>
           
         <div class="col m-2">
           <div class="card" style="width: 15rem;">
             <img class="card-img-top" src="https://cdn.dribbble.com/users/331157/screenshots/2571326/calendar.gif" alt="Card image cap">
             <div class="card-body">
-              <a href="attendance.php?date=<?php echo $value;?>" class="card-link d-flex justify-content-center"><?php echo $value;?></a>
+              <a href="attendance.php?date=<?php echo$value->date;?>" class="card-link d-flex justify-content-center"><?php echo $value->date ;?></a>
             </div>
           </div>
         </div>

@@ -241,7 +241,7 @@ function resolve(){
       else{
         swal({
       title: "OOPS!",
-      text: response.data+'1234567890',
+      text: response.data,
       icon : "info"
     }).then(function() {
         location.reload();

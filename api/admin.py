@@ -14,7 +14,7 @@ def get_date():
     try:
         conn = mysql.connect()
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute("SELECT date FROM attendance")
+        cursor.execute("SELECT DISTINCT date FROM attendance")
         empRows = cursor.fetchall()
         respone = jsonify(empRows)
         respone.status_code = 200
