@@ -1,9 +1,8 @@
-
 <?php 
-$get_students = file_get_contents('http://127.0.0.1:5000/get_students/'.$_GET['cls']);
+$get_students = file_get_contents('https://attendance-flask-app.herokuapp.com/get_students/'.$_GET['cls']);
 $get_students = json_decode($get_students);
 
-$get_date = file_get_contents('http://127.0.0.1:5000/get_date');
+$get_date = file_get_contents('https://attendance-flask-app.herokuapp.com/get_date');
 $get_date = json_decode($get_date);
 
 $date = strval(intval(date('d'))).'-'.strval(intval(date('m'))).'-'.date('Y');
@@ -12,7 +11,7 @@ $check_attendance = 0;
 
 foreach ($get_date as $key => $value) {
 	if ($value->date == $date) {
-		$get_attendance = file_get_contents('http://127.0.0.1:5000/get_attendance/'.$value->date);
+		$get_attendance = file_get_contents('https://attendance-flask-app.herokuapp.com/get_attendance/'.$value->date);
 		$get_attendance = json_decode($get_attendance); 
 
 		foreach ($get_attendance as $key => $value) {
@@ -25,7 +24,8 @@ foreach ($get_date as $key => $value) {
 	}
 }
 function destroy(){
-	header("Location: login.php");
+	header('Location: login.php');
+exit;
 }
 if (isset($_GET['hello'])) {
 	destroy();
@@ -68,7 +68,7 @@ if (isset($_GET['hello'])) {
 			</ul>
 			<div class="navbar">
 				<i class="fa fa-sign-out" style="color:white"></i>
-				<a href='index.php?hello=true' style="text-decoration: none;">Logout</a>
+				<a href='index.php?hello=true&cls=<?php echo $_GET["cls"];?>&<?php echo $_GET["staff_id"];?>' style="text-decoration: none;">Logout</a>
 			</div>
 
 		</div>

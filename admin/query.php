@@ -1,5 +1,5 @@
 <?php 
-$get_query = file_get_contents('http://127.0.0.1:5000/get_query');
+$get_query = file_get_contents('https://attendance-flask-app.herokuapp.com/get_query');
 $query_details = json_decode($get_query);
 $query_count = 0;
 foreach ($query_details as $key => $value) {

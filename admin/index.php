@@ -1,8 +1,8 @@
 <?php 
-  $get_date = file_get_contents('http://127.0.0.1:5000/get_date');
+  $get_date = file_get_contents('https://attendance-flask-app.herokuapp.com/get_date');
   $get_date = json_decode($get_date); 
 
-  $query_count = file_get_contents('http://127.0.0.1:5000/pending_query_count');
+  $query_count = file_get_contents('https://attendance-flask-app.herokuapp.com/pending_query_count');
   $query_count = json_decode($query_count);
 
   $arr = array();
@@ -14,8 +14,6 @@
     }
   }
   function destroy(){
-    session_unset();
-    session_destroy();
     header("Location: ./login.html");
   }
   if (isset($_GET['hello'])) {

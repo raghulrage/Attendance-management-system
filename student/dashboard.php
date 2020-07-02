@@ -2,7 +2,7 @@
 session_start();
 $regno = $_GET['regno'];
 $_SESSION['regno'] = $regno;
-$get_attendance = file_get_contents('http://127.0.0.1:5000/get_student_attendance/'.$regno);
+$get_attendance = file_get_contents('https://attendance-flask-app.herokuapp.com/get_student_attendance/'.$regno);
 $get_attendance = json_decode($get_attendance); 
 function destroy(){
 	session_unset();

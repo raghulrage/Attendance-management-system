@@ -1,5 +1,5 @@
 <?php 
-	$get_class = file_get_contents('http://127.0.0.1:5000/get_class');
+	$get_class = file_get_contents('https://attendance-flask-app.herokuapp.com/get_class');
 	$get_class = json_decode($get_class); 
 ?>
 
@@ -40,7 +40,7 @@
 			</ul>
 			<div class="navbar">
 				<i class="fa fa-sign-out" style="color:white"></i>
-				<a href='index.php?hello=true' style="text-decoration: none;">Logout</a>
+				<a href='index.php?hello=true&cls=<?php echo $_GET["cls"];?>&<?php echo $_GET["staff_id"];?>' style="text-decoration: none;">Logout</a>
 			</div>
 
 		</div>

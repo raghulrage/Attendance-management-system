@@ -1,12 +1,12 @@
 <?php 
   $date=$_GET['date'];
-  $get_attendance = file_get_contents('http://127.0.0.1:5000/get_attendance/'.$date);
+  $get_attendance = file_get_contents('https://attendance-flask-app.herokuapp.com/get_attendance/'.$date);
   $get_attendance = json_decode($get_attendance); 
 
-  $get_class = file_get_contents('http://127.0.0.1:5000/get_class');
+  $get_class = file_get_contents('https://attendance-flask-app.herokuapp.com/get_class');
   $get_class = json_decode($get_class);
 
-  $query_count = file_get_contents('http://127.0.0.1:5000/pending_query_count');
+  $query_count = file_get_contents('https://attendance-flask-app.herokuapp.com/pending_query_count');
   $query_count = json_decode($query_count);
 
   function destroy(){

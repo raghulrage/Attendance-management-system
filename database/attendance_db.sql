@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.7.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 12, 2020 at 08:25 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Host: sql12.freesqldatabase.com
+-- Generation Time: Jul 02, 2020 at 08:40 AM
+-- Server version: 5.5.62-0ubuntu0.14.04.1
+-- PHP Version: 7.0.33-0ubuntu0.16.04.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `attendance_db`
+-- Database: `sql12352039`
 --
 
 -- --------------------------------------------------------
@@ -32,8 +32,8 @@ CREATE TABLE `admin` (
   `query_id` int(11) NOT NULL,
   `query` mediumtext NOT NULL,
   `staff` varchar(50) NOT NULL,
-  `date` varchar(20) NOT NULL DEFAULT current_timestamp(),
-  `status` int(1) NOT NULL DEFAULT 0
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -41,19 +41,19 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`query_id`, `query`, `staff`, `date`, `status`) VALUES
-(24, 'qwertyuiopsdfykl;zxcvbnm,.', 'clg1003', '2020-04-22 16:23:47', 1),
-(25, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'clg1003', '2020-04-22 16:27:43', 0),
-(27, 'jhdg\nsgs\nhdfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\ndhdfhdfhdfhdfh\ndhdfhdfhfddfhd', 'clg1003', '2020-04-22 16:33:40', 1),
-(28, 'dzxcgadxvbvcgdrs f brfasrF zxhfsbfvbsd ga agwere', 'clg1003', '2020-04-22 16:33:50', 1),
-(29, 'verify daily attendance', 'clg1003', '2020-04-22 16:34:02', 0),
-(30, 'today attendance updated', 'clg1003', '2020-04-22 16:35:25', 1),
-(31, 'wergf', 'clg1003', '2020-04-22 16:35:30', 1),
-(32, 'hi hello', 'clg1004', '2020-04-23 20:40:11', 1),
-(33, 'hiiii', 'clg1003', '2020-04-30 11:53:06', 1),
-(34, 'vanakam da mapla', 'clg1004', '2020-05-04 10:22:14', 1),
-(35, 'Order one', 'clg1004', '2020-05-06 11:39:18', 0),
-(36, 'updated attendance for 6/5', 'clg1004', '2020-05-06 11:40:11', 0),
-(37, 'hello', 'clg1004', '2020-05-14 16:37:15', 1);
+(24, 'qwertyuiopsdfykl;zxcvbnm,.', 'clg1003', '2020-04-23 00:23:47', 1),
+(25, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'clg1003', '2020-04-23 00:27:43', 0),
+(27, 'jhdg\nsgs\nhdfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\ndhdfhdfhdfhdfh\ndhdfhdfhfddfhd', 'clg1003', '2020-04-23 00:33:40', 1),
+(28, 'dzxcgadxvbvcgdrs f brfasrF zxhfsbfvbsd ga agwere', 'clg1003', '2020-04-23 00:33:50', 1),
+(29, 'verify daily attendance', 'clg1003', '2020-04-23 00:34:02', 0),
+(30, 'today attendance updated', 'clg1003', '2020-04-23 00:35:25', 1),
+(31, 'wergf', 'clg1003', '2020-04-23 00:35:30', 1),
+(32, 'hi hello', 'clg1004', '2020-04-24 04:40:11', 1),
+(33, 'hiiii', 'clg1003', '2020-04-30 19:53:06', 1),
+(34, 'vanakam da mapla', 'clg1004', '2020-05-04 18:22:14', 1),
+(35, 'Order one', 'clg1004', '2020-05-06 19:39:18', 0),
+(36, 'updated attendance for 6/5', 'clg1004', '2020-05-06 19:40:11', 0),
+(37, 'hello', 'clg1004', '2020-05-15 00:37:15', 1);
 
 -- --------------------------------------------------------
 
@@ -233,19 +233,16 @@ ALTER TABLE `student`
 --
 ALTER TABLE `admin`
   MODIFY `query_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
-
 --
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
   MODIFY `attendance_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
-
 --
 -- AUTO_INCREMENT for table `class`
 --
 ALTER TABLE `class`
-  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
-COMMIT;
+  MODIFY `class_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

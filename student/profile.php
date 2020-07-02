@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$get_student = file_get_contents('http://127.0.0.1:5000/get_student_details/'.$_SESSION['regno']);
+	$get_student = file_get_contents('https://attendance-flask-app.herokuapp.com/get_student_details/'.$_SESSION['regno']);
 	$get_student = json_decode($get_student);
  ?>
 <!DOCTYPE html>
@@ -33,7 +33,7 @@
 			</ul>
 			<div class="navbar">
 				<i class="fa fa-sign-out" style="color:white"></i>
-				<a href='dashboard.php?hello=true' style="text-decoration: none;">Logout</a>
+				<a href='dashboard.php?hello=true&regno=<?php echo $_SESSION["regno"]; ?>' style="text-decoration: none;">Logout</a>
 			</div>
 
 		</div>

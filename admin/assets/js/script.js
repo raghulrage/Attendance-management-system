@@ -18,7 +18,7 @@ function delete_class(){
     headers: { 'Content-Type': 'application/json' }
   };
 
-  axios.post('http://127.0.0.1:5000/delete_class', arr, config)
+  axios.post('https://attendance-flask-app.herokuapp.com/delete_class', arr, config)
   .then((response) => {
     console.log(response.data);
     if (response.data === 'Class deleted successfully!') {
@@ -58,7 +58,7 @@ function delete_class(){
         headers: { 'Content-Type': 'application/json' }
       };
 
-    axios.post('http://127.0.0.1:5000/add', arr, config)
+    axios.post('https://attendance-flask-app.herokuapp.com/add', arr, config)
       .then((response) => {
       console.log(response.data);
       if (response.data === 'Student added successfully!') {
@@ -97,7 +97,7 @@ function add_class(){
     headers: { 'Content-Type': 'application/json' }
   };
 
-  axios.post('http://127.0.0.1:5000/add_class', arr, config)
+  axios.post('https://attendance-flask-app.herokuapp.com/add_class', arr, config)
   .then((response) => {
     console.log(response.data);
     if (response.data === 'Class added successfully!') {
@@ -149,7 +149,7 @@ function delete_student(){
     headers: { 'Content-Type': 'application/json' }
   };
 
-  axios.post('http://127.0.0.1:5000/delete_student', arr, config)
+  axios.post('https://attendance-flask-app.herokuapp.com/delete_student', arr, config)
   .then((response) => {
     console.log(response.data);
     if (response.data === 'Student deleted successfully!') {
@@ -200,7 +200,7 @@ function resolve(){
     headers: { 'Content-Type': 'application/json' }
   };
 
-  axios.patch('http://127.0.0.1:5000/resolve_query', arr, config)
+  axios.patch('https://attendance-flask-app.herokuapp.com/resolve_query', arr, config)
   .then((response) => {
     console.log(response.data);
     if (response.data === 'Query resolved successfully!') {
@@ -226,7 +226,7 @@ function resolve(){
         headers: { 'Content-Type': 'application/json' }
       };
 
-    axios.post('http://127.0.0.1:5000/add_staff', arr, config)
+    axios.post('https://attendance-flask-app.herokuapp.com/add_staff', arr, config)
       .then((response) => {
       console.log(response.data);
       if (response.data === 'Staff Added successfully!') {
@@ -262,7 +262,7 @@ function delete_staff(){
     headers: { 'Content-Type': 'application/json' }
   };
 
-  axios.post('http://127.0.0.1:5000/delete_staff', arr, config)
+  axios.post('https://attendance-flask-app.herokuapp.com/delete_staff', arr, config)
   .then((response) => {
     console.log(response.data);
     if (response.data === 'Staff deleted successfully!') {

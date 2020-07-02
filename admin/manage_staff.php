@@ -1,5 +1,5 @@
 <?php 
-  $query_count = file_get_contents('http://127.0.0.1:5000/pending_query_count');
+  $query_count = file_get_contents('https://attendance-flask-app.herokuapp.com/pending_query_count');
   $query_count = json_decode($query_count); ?>
 
 <!DOCTYPE html>

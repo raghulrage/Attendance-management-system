@@ -39,7 +39,7 @@
 				headers: { 'Content-Type': 'application/json' }
 			};
 
-			axios.post('http://127.0.0.1:5000/student_login/'+regno,config)
+			axios.post('https://attendance-flask-app.herokuapp.com/student_login/'+regno,config)
 			.then((response) =>{
 				console.log(response.data);
 				if (response.data === 'Sudent Login successful!!') {

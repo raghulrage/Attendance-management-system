@@ -22,7 +22,7 @@ function add_student(){
     headers: { 'Content-Type': 'application/json' }
   };
 
-  axios.post('http://127.0.0.1:5000/add', arr, config)
+  axios.post('https://attendance-flask-app.herokuapp.com/add', arr, config)
   .then((response) => {
     console.log(response.data);
 
@@ -73,7 +73,7 @@ function attendance(){
     headers: { 'Content-Type': 'application/json' }
   };
 
-  axios.post('http://127.0.0.1:5000/attendance', details, config)
+  axios.post('https://attendance-flask-app.herokuapp.com/attendance', details, config)
   .then((response) => {
     console.log(response.data);
     if (response.data === 'Attendance updated successfully!') {
@@ -107,7 +107,7 @@ function add_query(){
     }
   }
 
-  axios.post('http://127.0.0.1:5000/add_query',query_details,config).then((response)=>{
+  axios.post('https://attendance-flask-app.herokuapp.com/add_query',query_details,config).then((response)=>{
     if (response.data === 'Query added successfully!'){
       swal({
         title:'Yeah!',
@@ -144,7 +144,7 @@ function add_query(){
     }
 
 
-    axios.post('http://127.0.0.1:5000/login_staff', arr, config)
+    axios.post('https://attendance-flask-app.herokuapp.com/login_staff', arr, config)
     .then((response) => {
       console.log(response.data);
 
