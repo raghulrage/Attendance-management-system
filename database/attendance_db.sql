@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2020 at 02:48 PM
+-- Generation Time: Jun 12, 2020 at 08:25 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -46,9 +46,14 @@ INSERT INTO `admin` (`query_id`, `query`, `staff`, `date`, `status`) VALUES
 (27, 'jhdg\nsgs\nhdfhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\ndhdfhdfhdfhdfh\ndhdfhdfhfddfhd', 'clg1003', '2020-04-22 16:33:40', 1),
 (28, 'dzxcgadxvbvcgdrs f brfasrF zxhfsbfvbsd ga agwere', 'clg1003', '2020-04-22 16:33:50', 1),
 (29, 'verify daily attendance', 'clg1003', '2020-04-22 16:34:02', 0),
-(30, 'today attendance updated', 'clg1003', '2020-04-22 16:35:25', 0),
-(31, 'wergf', 'clg1003', '2020-04-22 16:35:30', 0),
-(32, 'hi hello', 'clg1004', '2020-04-23 20:40:11', 1);
+(30, 'today attendance updated', 'clg1003', '2020-04-22 16:35:25', 1),
+(31, 'wergf', 'clg1003', '2020-04-22 16:35:30', 1),
+(32, 'hi hello', 'clg1004', '2020-04-23 20:40:11', 1),
+(33, 'hiiii', 'clg1003', '2020-04-30 11:53:06', 1),
+(34, 'vanakam da mapla', 'clg1004', '2020-05-04 10:22:14', 1),
+(35, 'Order one', 'clg1004', '2020-05-06 11:39:18', 0),
+(36, 'updated attendance for 6/5', 'clg1004', '2020-05-06 11:40:11', 0),
+(37, 'hello', 'clg1004', '2020-05-14 16:37:15', 1);
 
 -- --------------------------------------------------------
 
@@ -70,7 +75,6 @@ CREATE TABLE `attendance` (
 
 INSERT INTO `attendance` (`attendance_id`, `register_no`, `class`, `attendance`, `date`) VALUES
 (3, '17mech01', 'mech', 'Present', '9-4-2020'),
-(4, '17mech03', 'mech', 'Absent', '9-4-2020'),
 (5, '17cse68', 'cse', 'Present', '9-4-2020'),
 (6, '17cse70', 'cse', 'Present', '9-4-2020'),
 (7, '17ece45', 'ece', 'Present', '9-4-2020'),
@@ -82,13 +86,11 @@ INSERT INTO `attendance` (`attendance_id`, `register_no`, `class`, `attendance`,
 (13, '17eee12', 'eee', 'Absent', '10-4-2020'),
 (14, '17eee34', 'eee', 'Present', '10-4-2020'),
 (15, '17mech01', 'mech', 'Present', '10-4-2020'),
-(16, '17mech03', 'mech', 'Present', '10-4-2020'),
 (17, '17cse68', 'cse', 'Present', '10-4-2020'),
 (18, '17cse70', 'cse', 'Present', '10-4-2020'),
 (19, '17ece45', 'ece', 'Present', '20-4-2020'),
 (20, '17ece98', 'ece', 'Absent', '20-4-2020'),
 (21, '17mech01', 'mech', 'Present', '20-4-2020'),
-(22, '17mech03', 'mech', 'Present', '20-4-2020'),
 (23, '17eee12', 'eee', 'Present', '20-4-2020'),
 (24, '17eee34', 'eee', 'Present', '20-4-2020'),
 (25, '123', 'eee', 'Present', '20-4-2020'),
@@ -99,7 +101,6 @@ INSERT INTO `attendance` (`attendance_id`, `register_no`, `class`, `attendance`,
 (38, '17cse70', 'cse', 'Present', '22-4-2020'),
 (39, '17cse114', 'cse', 'Present', '22-4-2020'),
 (40, '17mech01', 'mech', 'Present', '23-4-2020'),
-(41, '17mech03', 'mech', 'Present', '23-4-2020'),
 (42, '17mech18', 'mech', 'Present', '23-4-2020'),
 (43, '17cse301', 'cse', 'Present', '23-4-2020'),
 (44, '17cse63', 'cse', 'Present', '23-4-2020'),
@@ -130,8 +131,7 @@ CREATE TABLE `class` (
 INSERT INTO `class` (`class_id`, `class_name`) VALUES
 (20, 'cse'),
 (22, 'ece'),
-(23, 'eee'),
-(21, 'mech');
+(23, 'eee');
 
 -- --------------------------------------------------------
 
@@ -149,9 +149,11 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`staff_id`, `staff_name`) VALUES
+('clg1001', 'Satheesh'),
 ('clg1002', 'Venkatesh'),
 ('clg1003', 'Archana'),
-('clg1004', 'Ezhil');
+('clg1004', 'Ezhil'),
+('clg1005', 'Raghul');
 
 -- --------------------------------------------------------
 
@@ -178,16 +180,14 @@ INSERT INTO `student` (`register_no`, `student_name`, `class`) VALUES
 ('17cse68', 'Raghul', 'cse'),
 ('17cse70', 'Raja', 'cse'),
 ('17cse74', 'Ramya', 'cse'),
+('17cse75', 'Ranjith', 'cse'),
 ('17cse84', 'Sanjay K M', 'cse'),
 ('17cse88', 'Shankara Narayanan K J', 'cse'),
 ('17ece45', 'Ram', 'ece'),
 ('17ece68', 'Rahul Jp', 'ece'),
 ('17ece98', 'Vasu', 'ece'),
 ('17eee12', 'Mano', 'eee'),
-('17eee34', 'Murali', 'eee'),
-('17mech01', 'Amar', 'mech'),
-('17mech03', 'Faizal', 'mech'),
-('17mech18', 'Mani', 'mech');
+('17eee34', 'Murali', 'eee');
 
 --
 -- Indexes for dumped tables
@@ -232,7 +232,7 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `query_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `query_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `attendance`
